@@ -9,4 +9,4 @@
 # パスワード自動生成（autopass.py)
 　乱数を発生させ、Asciiコードをから文字に変換、8回繰り返して8文字のパスワードを作成する。
 
- → 
+ → https://github.com/yowayowahacker/learn/blob/master/autopass.py
