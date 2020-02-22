@@ -20,3 +20,5 @@
 　Rot13をPythonで書いたものです。
  入力された文字列を文字ごとにAsciiコードに直して、コード + 13　をして、文字に戻す処理をしています。
  +13をしたときにA~Zに収まらないものは-26をしてうまく回転するようにしています。
+
+→ https://github.com/yowayowahacker/learn/blob/master/rot13.py
