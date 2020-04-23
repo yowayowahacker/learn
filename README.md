@@ -15,6 +15,8 @@
 - 保存しているパスワードと被る可能性がある。
 
  → https://github.com/yowayowahacker/learn/blob/master/autopass.py
+ #### (Makepass.java)
+ Java版です
 
 # Rot13（Rot13.py）
 　Rot13をPythonで書いたものです。
