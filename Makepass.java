@@ -7,38 +7,46 @@ public class Makepass
 	{
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æ¡æ•°ã‚’å…¥åŠ›");
+		//“ü—Í‚ğó‚¯‚é
+		System.out.println("ƒpƒXƒ[ƒh‚ÌŒ…”‚ğ“ü—Í");
 		String passlen = "";
 		passlen = scan.next();
 		scan.close();
 
 		int len = Integer.parseInt(passlen);
 		int i = 0;
+		int passint[] = new int[len];
+		
+		while(i < len){  //—”‚ğ”­¶
+			Random random = new Random();
+			int rand = random.nextInt(122)+48;
 
-		if(len == 8){
-			while(i < 8){
-				Random random = new Random();
-				int rand = random.nextInt(122)+48;  //ä¹±æ•°ã‚’ç™ºç”Ÿ
-
-				if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122){  //ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã«å¤‰æ›
-					byte asciicodes = (byte)rand;
-					System.out.println(asciicodes);
-
-					i++;
-				}
-			}
-		}else{
-			while(i < len){
-				Random random = new Random();
-				int rand = random.nextInt(122)+48;  //ä¹±æ•°ã‚’ç™ºç”Ÿ
-
-				if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122){  //ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã«å¤‰æ›
-					byte asciicodes = (byte)rand;
-					System.out.println(asciicodes);
+			try{
+				if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122){
+					passint[i] = rand;
 
 					i++;
 				}
+			}catch(Exception e){  //—áŠOˆ—
+				e.printStackTrace();
 			}
 		}
+		
+		//int to byte
+		byte passbyte[] = new byte[len];
+		for(i = 0; i < len; i++){
+			passbyte[i] = (byte)passint[i];
+		}
+		
+		//byte to String
+		String pass = "";
+		try {
+            pass = new String(passbyte, "US-ASCII");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+		
+		System.out.println(pass);
 	}
 }
