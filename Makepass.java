@@ -8,27 +8,31 @@ public class Makepass
 		Scanner scan = new Scanner(System.in);
 
 		//入力を受ける
-		System.out.println("パスワードの桁数を入力");
-		String passlen = "";
-		passlen = scan.next();
-		scan.close();
+		int len = 0;
+		while(true)
+		{
+			System.out.println("パスワードの桁数を入力");
+			try {
+				len = Integer.parseInt(scan.next());
+				scan.close();
+				break;
+			}catch(NumberFormatException e) {
+				System.out.println("数字で入力してください");
+				continue;
+			}
+		}
 
-		int len = Integer.parseInt(passlen);
 		int i = 0;
 		int passint[] = new int[len];
 		
-		while(i < len){  //乱数を発生
+		while(i < len) {  //乱数を発生
 			Random random = new Random();
 			int rand = random.nextInt(122)+48;
 
-			try{
-				if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122){
-					passint[i] = rand;
+			if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122) {
+				passint[i] = rand;
 
-					i++;
-				}
-			}catch(Exception e){  //例外処理
-				e.printStackTrace();
+				i++;
 			}
 		}
 		
