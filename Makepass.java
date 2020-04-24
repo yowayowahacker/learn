@@ -6,6 +6,13 @@ public class Makepass
 	public static void main(String[] args)
 	{
 		Scanner scan = new Scanner(System.in);
+		
+		final int Asc_0 = 48;
+		final int Asc_9 = 57;
+		final int Asc_A = 65;
+		final int Asc_Z = 90;
+		final int Asc_a = 97;
+		final int Asc_z = 122;
 
 		//“ü—Í‚ðŽó‚¯‚é
 		int len = 0;
@@ -23,33 +30,18 @@ public class Makepass
 		}
 
 		int i = 0;
-		int passint[] = new int[len];
+		char[] pass = new char[len];
 		
-		while(i < len) {  //—”‚ð”­¶
+		while(i < len) {
 			Random random = new Random();
-			int rand = random.nextInt(122)+48;
+			int rand = random.nextInt(122)+48;  //—”‚ð¶¬
 
-			if(rand >= 48 && rand <= 57 || rand >= 65 && rand <= 90 || rand >= 97 && rand <= 122) {
-				passint[i] = rand;
+			if(rand >= Asc_0 && rand <= Asc_9 || rand >= Asc_A && rand <= Asc_Z || rand >= Asc_a && rand <= Asc_z) {
+				pass[i] = (char)rand;  //•¶Žš‚É•ÏŠ·
 
 				i++;
 			}
 		}
-		
-		//int to byte
-		byte passbyte[] = new byte[len];
-		for(i = 0; i < len; i++){
-			passbyte[i] = (byte)passint[i];
-		}
-		
-		//byte to String
-		String pass = "";
-		try {
-            pass = new String(passbyte, "US-ASCII");
-        } catch (Exception e) {
-            e.printStackTrace();
-            return;
-        }
 		
 		System.out.println(pass);
 	}
