@@ -9,7 +9,7 @@ public class Makepass
 	{
 		Scanner scan = new Scanner(System.in);
 		
-		//’è”‚ğéŒ¾iAsciiƒR[ƒhj
+		//å®šæ•°ã‚’å®£è¨€ï¼ˆAsciiã‚³ãƒ¼ãƒ‰ï¼‰
 		final int Asc_exc = 33;
 		final int Asc_0 = 48;
 		final int Asc_9 = 57;
@@ -19,22 +19,22 @@ public class Makepass
 		final int Asc_z = 122;
 		final int Asc_til = 126;
 
-		//“ü—Í‚ğó‚¯‚é
+		//å…¥åŠ›ã‚’å—ã‘ã‚‹
 		int len = 0;
 		String mark = "";
 		while(true)
 		{
 			try {
-				System.out.println("ƒpƒXƒ[ƒh‚ÌŒ…”‚ğ“ü—Í");
+				System.out.println("ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æ¡æ•°ã‚’å…¥åŠ›");
 				len = Integer.parseInt(scan.next());
 				break;
 			}catch(NumberFormatException e) {
-				System.out.println("”š‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("æ•°å­—ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 				continue;
 			}
 		}
 		
-		System.out.println("‹L†F—L_y   –³_n");
+		System.out.println("è¨˜å·ï¼šæœ‰_y   ç„¡_n");
 		mark = scan.next();
 		scan.close();
 
@@ -62,15 +62,15 @@ public class Makepass
 		System.out.println(pass);
 		
 		String pastr = String.valueOf(pass);
-        String pasha = "";
+        	String pasha = "";
 		
 		try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] result = digest.digest(pastr.getBytes());
-            pasha = String.format("%040x", new BigInteger(1, result));
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+            	MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            	byte[] result = digest.digest(pastr.getBytes());
+            	pasha = String.format("%040x", new BigInteger(1, result));
+        	} catch (Exception e){
+            		e.printStackTrace();
+        	}
 		
 		System.out.println(pasha);
 	}
