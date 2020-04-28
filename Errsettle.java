@@ -8,7 +8,7 @@ public class Errsettle
 		//外部プロセスを実行
   		Process p;
 		p = Runtime.getRuntime().exec(com); 
-        return p;
+        	return p;
 	}
 
 	public static String ErrGet(Process p) throws IOException, Exception
@@ -27,6 +27,7 @@ public class Errsettle
 			}
 			Err = err.toString();
 		}catch(IOException ex){
+			ex.Exception;
 		}
 		return Err;
 	}
@@ -82,6 +83,7 @@ public class Errsettle
             			}
             			so = out.toString();
         		}catch(IOException ex){
+				ex.Excepton;
         		}
 			System.out.println(so);
 		}
