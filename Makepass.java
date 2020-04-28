@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.math.BigInteger;
+import java.security.MessageDigest;	
 
 public class Makepass
 {
@@ -58,5 +60,18 @@ public class Makepass
 		}
 		
 		System.out.println(pass);
+		
+		String pastr = String.valueOf(pass);
+        String pasha = "";
+		
+		try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-1");
+            byte[] result = digest.digest(pastr.getBytes());
+            pasha = String.format("%040x", new BigInteger(1, result));
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+		
+		System.out.println(pasha);
 	}
 }
