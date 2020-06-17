@@ -41,3 +41,10 @@
 勉強会で、linuxコマンドのmakeとsedを駆使すればなんとかなるのでは、、、という話
 
 → https://github.com/yowayowahacker/learn/blob/master/Debug2.java
+
+# 計算問題出題
+　基本的な例外処理を勉強しました。
+
+　割り算の解答入力の形式をどうしようか迷っています。
+ 
+　正答率を出す計算がうまく行かず困っています。
