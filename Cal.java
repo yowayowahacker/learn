@@ -237,7 +237,6 @@ public class Cal
             break;
         }
 
-        System.out.println("A");
         /*if(p == 0){
           corr += 1;
         }else{
