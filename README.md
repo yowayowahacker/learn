@@ -48,3 +48,5 @@
 　割り算の解答入力の形式をどうしようか迷っています。
  
 　正答率を出す計算がうまく行かず困っています。
+
+　→ https://github.com/yowayowahacker/learn/blob/master/Cal.java
