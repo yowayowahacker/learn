@@ -40,6 +40,8 @@
 
 勉強会で、linuxコマンドのmakeとsedを駆使すればなんとかなるのでは、、、という話
 
+---作成中---
+
 → https://github.com/yowayowahacker/learn/blob/master/Debug2.java
 
 # 計算問題出題
