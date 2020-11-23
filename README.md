@@ -42,7 +42,9 @@
 
 ---作成中---
 
-→ https://github.com/yowayowahacker/learn/blob/master/Debug2.java
+Linuxコマンドを利用して何とかする方法を実装してみました。
+
+→ https://github.com/yowayowahacker/learn/blob/master/Linux_Debug.java
 
 # 計算問題出題
 　基本的な例外処理を勉強しました。
